@@ -12,47 +12,59 @@ public abstract class Iphone implements ReprodutorMusical, AparelhoTelefonico, N
 	public static void main(String[] args) {
 		Smatphone smatphone = new Smatphone();
 		Scanner sc = new Scanner(System.in);
+		
+		int acao = 0;
 
-		System.out.printf("1 - Ligar%n2 - Atender%n3 - Correio de Voz%n"
-				+ "4 - Exibir página do navegador%n5 - Atualizar Página%n"
-				+ "6 - Adicionar nova aba%n7 - Selecionar Música%n8 - Tocar música%n"
-				+ "9 - Pausar música%n0 - Para bloquear o Iphone");
-		int acao = sc.nextInt();
+		do {
+			System.out.printf("1 - Ligar%n2 - Atender%n3 - Correio de Voz%n"
+					+ "4 - Exibir página do navegador%n5 - Atualizar Página%n"
+					+ "6 - Adicionar nova aba%n7 - Selecionar Música%n8 - Tocar música%n"
+					+ "9 - Pausar música%n0 - Para bloquear o Iphone%n");
+			acao = sc.nextInt();
 
-		switch (acao) {
-		case 1:
-			smatphone.ligar();
-			break;
-		case 2:
-			smatphone.atender();
-			break;
-		case 3:
-			smatphone.iniciarCorreioVoz();
-			break;
-		case 4:
-			smatphone.exibirPagina();
-			break;
-		case 5:
-			smatphone.atualizarPagina();
-			break;
-		case 6:
-			smatphone.adicionarNovaAba();
-			break;
-		case 7:
-			smatphone.selecionarMusica();
-			break;
-		case 8:
-			smatphone.tocar();
-			break;
-		case 9:
-			smatphone.pausar();
-			break;
-		default:
-			System.out.println("Opção inválida");
-			break;
-		}
+			switch (acao) {
+			case 1:
+				smatphone.ligar();
+				System.out.println();
+				break;
+			case 2:
+				smatphone.atender();
+				System.out.println();
+				break;
+			case 3:
+				smatphone.iniciarCorreioVoz();
+				System.out.println();
+				break;
+			case 4:
+				smatphone.exibirPagina();
+				System.out.println();
+				break;
+			case 5:
+				smatphone.atualizarPagina();
+				System.out.println();
+				break;
+			case 6:
+				smatphone.adicionarNovaAba();
+				System.out.println();
+				break;
+			case 7:
+				smatphone.selecionarMusica();
+				System.out.println();
+				break;
+			case 8:
+				smatphone.tocar();
+				System.out.println();
+				break;
+			case 9:
+				smatphone.pausar();
+				System.out.println();
+				break;
+			case 0:
+				System.out.println("Tela do Iphone bloqueada");
+				break;
+			}
+
+		} while (acao != 0);
 
 	}
-
 }
-//implementar um looping antes de entregar na plataforma da DIO
